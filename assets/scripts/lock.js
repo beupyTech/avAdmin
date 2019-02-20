@@ -1,5 +1,6 @@
 var redirect;
 var login = false;
+var path;
 var lockHTML = {
     password: document.getElementById('pass'),
     lock: document.getElementById('unlock')
@@ -20,7 +21,7 @@ var createXmlhttp = function(method, pName, data, callback) {
       if(this.status === 200 && this.readyState === 4){
           redirect = JSON.parse(this.response);
           if(redirect.message === true){
-              window.location.href = "http://adminillfree.surge.sh/main.html";
+              window.location.href = "main.html";
               login = true;
           }else{
               alert("Password Is Wrong.")
@@ -33,7 +34,7 @@ var createXmlhttp = function(method, pName, data, callback) {
 lockHTML.lock.addEventListener('click', function(e){
     e.preventDefault();
     var value = lockHTML.password.value;
-    var urlB = 'http://theillfree2019.openode.io/password?pass='+value;
+    var urlB = 'https://theillfree2019.openode.io/password?pass='+value;
     createXmlhttp('GET', urlB);
 
 });

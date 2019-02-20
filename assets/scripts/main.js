@@ -51,9 +51,9 @@ var serverRequestPost = function(url, data, callback){
     xhr.send(stringifyData);
 };
 var serverReq = function(){
-    var contactURL = "http://theillfree2019.openode.io/contact";
-    var ordersURL = "http://theillfree2019.openode.io/orders";
-    var ipData =  "http://theillfree2019.openode.io/getIp";
+    var contactURL = "https://theillfree2019.openode.io/contact";
+    var ordersURL = "https://theillfree2019.openode.io/orders";
+    var ipData =  "https://theillfree2019.openode.io/getIp";
     createXmlhttp("GET", contactURL, function(){
         console.log("Running");
         if(this.status === 200 && this.readyState === 4){
@@ -64,11 +64,11 @@ var serverReq = function(){
               order = JSON.parse(this.response);
               htmlElement.totalOrdersNum.innerHTML = order.orders.length;
               parseorder(order.orders);
-              createXmlhttp("GET", "http://theillfree2019.openode.io/getProduct", ()=>{
+              createXmlhttp("GET", "https://theillfree2019.openode.io/getProduct", ()=>{
                   if(this.status === 200 && this.readyState === 4){
                       productObj = JSON.parse(this.response);
                       //console.log(productObj);
-              createXmlhttp("GET", "http://theillfree2019.openode.io/getPing", ()=>{
+              createXmlhttp("GET", "https://theillfree2019.openode.io/getPing", ()=>{
                   if(this.status === 200 && this.readyState === 4){
                       views = JSON.parse(this.response);
                       console.log(views.message);
@@ -204,7 +204,7 @@ function changeOrderState(id){
         if(orders[i].id === id){
             orders[i].completed= true;
             //do server function calling here
-            createXmlhttp("GET", "http://theillfree2019.openode.io/updateOrder?id="+i, function(){
+            createXmlhttp("GET", "https://theillfree2019.openode.io/updateOrder?id="+i, function(){
                 console.log(this.response);
             })
             break;
@@ -285,7 +285,7 @@ function putOrderData(data){
 
 htmlElement.backBtn.addEventListener('click', function(e){
     e.preventDefault();
-    window.location.href = "http://adminillfree.surge.sh";
+    window.location.href = "index.html";
 });
 
 //product Displaying and Updating;
@@ -330,7 +330,7 @@ function productData(){
             };
             if(typeof(outputData.id) === 'number'){
                 upProduct.style.display = "none";
-                serverRequestPost("http://theillfree2019.openode.io/updateProduct", outputData, (res)=>{
+                serverRequestPost("https://theillfree2019.openode.io/updateProduct", outputData, (res)=>{
                   updateResult.innerHTML = "Update Completed, clicking again will change the value again.";
                   updateResult.style.color = "red";
                   upProduct.style.display = "inline";
