@@ -1,0 +1,46 @@
+<div class="row panel">
+    <div class="panel-heading"></div>
+    <div class="col-lg-12 col-md-12 col-sm-12 form-group panel-body">
+        <select id="selectProduct" class="form-control">
+            <option>Choose Product</option>
+        </select>
+    </div>
+</div>
+<div class="row panel" id="productDisplay">
+    <div class="panel-heading"></div>
+    <div class="col-lg-12 col-md-12 col-cm-12 panel-body">
+        <form action="/action_page.php">
+            <div class="form-group">
+            <label for="productId">Id: </label>
+            <p id="productId"></p>
+            </div>
+            <div class="form-group">
+            <label for="productName">ProductName:</label>
+            <input type="text" class="form-control" id="productName">
+            </div>
+            <div class="form-group">
+            <label for="productPrice">ProductPrice:</label>
+            <input type="text" class="form-control" id="productPrice">
+            </div>
+            <div class="form-group">
+            <label for="productPill">ProductPill:</label>
+            <input type="text" class="form-control" id="productPill">
+            </div>
+            <div class="form-group">
+            <label for="productShipping">ProductShipping:</label>
+            <input type="text" class="form-control" id="productShipping">
+            </div>
+            <div class="form-group">
+            <label for="productMg">ProductMg:</label>
+            <input type="text" class="form-control" id="productMg">
+            </div>
+            <div class="form-group">
+            <label for="product">Product</label>
+            <input type="text" class="form-control" id="product">
+            </div>
+            <button type="submit" class="btn btn-default" id="upProduct">Submit</button>
+            <label>If Click product will get updateded to above detail.</label>
+        </form>
+        <div id="updateResult"></div>
+    </div>
+</div>
