@@ -1,0 +1,15 @@
+{
+  "name": "avilon-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "gh-pages -d admin"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://beupyTech.github.io/avAdmin",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}

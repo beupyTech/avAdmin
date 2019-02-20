@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Theillfree Admin</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="assets/vendor/chartist/css/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+<!--
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+-->
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="index.html">Theillfree</a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth" id="goBack"><i class="lnr lnr-arrow-left-circle"></i></button>
+				</div>
+				<div id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+								<i class="lnr lnr-alarm"></i>
+								<span class="badge bg-danger" id="newOrders">0</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li class="navLink"><a class="active" id="home"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li class="navLink"><a id="newOrder"><i class="fa fa-bell"></i> <span>Orders</span></a></li>
+<!--
+						<li class="navLink"><a id="pendingOrder"><i class="lnr lnr-cart"></i> <span>Pending Orders</span></a></li>
+						<li class="navLink"><a id="totalOrder"><i class="lnr lnr-dice"></i> <span>Total Order</span></a></li>
+-->
+						<li class="navLink"><a id="messages"><i class="glyphicon glyphicon-envelope"></i> <span>Messages</span></a></li>
+                        <li class="navLink"><a id="products"><i class="glyphicon glyphicon-list-alt"></i> <span>Products</span></a></li>
+                        <li class="navLink"><a id="ips"><i class="glyphicon glyphicon-globe"></i> <span>Ip Info</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<!-- OVERVIEW -->
+					<div class="panel panel-headline">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-3">
+									<div class="metric">
+										<span class="icon"><i class="fa fa-download"></i></span>
+										<p>
+											<span class="number" id="totalOrderNum">0</span>
+											<span class="title">Total Order</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="metric">
+										<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+										<p>
+											<span class="number" id="totalOrderMessage">0</span>
+											<span class="title">Messages</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="metric">
+										<span class="icon"><i class="fa fa-eye"></i></span>
+										<p>
+											<span class="number" id="websiteViews">0</span>
+											<span class="title">Website Visits</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="metric" disabled>
+										<span class="icon"><i class="fa fa-bar-chart"></i></span>
+										<p>
+											<span class="number">0</span>
+											<span class="title">Conversions</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END OVERVIEW -->
+					<!-- Home Made Section -->
+					<section>
+						<div class="row" id="mainRow">
+							<div id="mainNavigation"></div>
+							<div id="sideNavigation"></div>
+						</div>
+					</section>
+
+		<div class="clearfix"></div>
+	</div>
+	</div>
+</div>
+        <footer>
+			<div class="container-fluid">
+				<p class="copyright">&copy; 2019 <a href="http://www.theillfree.com" target="_blank">Theillfree</a>. All Rights Reserved.</p>
+			</div>
+		</footer>
+</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
+	<script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
