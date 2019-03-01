@@ -254,6 +254,7 @@ function putOrderData(data){
     bState:document.getElementById('dataBillingState'),
     bCountry:document.getElementById('dataBillingCountry'),
     coinName:document.getElementById('dataCoinName'),
+    ppEmail: document.getElementById('datappEmail')
   };
     orderField.pills.innerHTML = data.pills;
     orderField.mg.innerHTML = data.mg;
@@ -281,6 +282,7 @@ function putOrderData(data){
     orderField.bState.innerHTML = data.billingState;
     orderField.bCountry.innerHTML = data.billingCountry;
     orderField.coinName.innerHTML = data.coinSelected;
+    orderField.ppEmail.innerHTML = data.paypalEmail
 };
 
 htmlElement.backBtn.addEventListener('click', function(e){
